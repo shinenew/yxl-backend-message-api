@@ -33,16 +33,18 @@ public class MessageSendRequest implements Serializable{
     private List<UUID> receiveUserList;
 
     /**
+     * 模版编码
+     */
+    @NotNull(message = "消息模版编码不能为空")
+    @Size(max = 36)
+    private String templateCode;
+
+    /**
      * 消息类型
      */
     @NotNull(message = "消息类型不能为空")
     private MessageTypeEnum messageType;
 
-    /**
-     * 消息模版编码
-     */
-    @NotNull(message = "消息模版编码不能为空")
-    private String messageTemplate;
 
     /**
      * 消息的参数
@@ -97,14 +99,6 @@ public class MessageSendRequest implements Serializable{
         return this;
     }
 
-    public String getMessageTemplate() {
-        return messageTemplate;
-    }
-
-    public MessageSendRequest setMessageTemplate(String messageTemplate) {
-        this.messageTemplate = messageTemplate;
-        return this;
-    }
 
     public String getMessageParameter() {
         return messageParameter;
@@ -130,6 +124,15 @@ public class MessageSendRequest implements Serializable{
 
     public MessageSendRequest setMessageExtra(String messageExtra) {
         this.messageExtra = messageExtra;
+        return this;
+    }
+
+    public String getTemplateCode() {
+        return templateCode;
+    }
+
+    public MessageSendRequest setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
         return this;
     }
 }

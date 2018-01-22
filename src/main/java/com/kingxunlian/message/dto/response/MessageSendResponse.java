@@ -1,5 +1,7 @@
 package com.kingxunlian.message.dto.response;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.alibaba.fastjson.serializer.ToStringSerializer;
 import com.kingxunlian.message.dto.enums.MessageStateEnum;
 import com.kingxunlian.message.dto.enums.MessageTypeEnum;
 
@@ -17,6 +19,7 @@ public class MessageSendResponse implements Serializable {
     /**
      * 消息唯一ID
      */
+    @JSONField(serializeUsing = ToStringSerializer.class)
     private Long messageId;
 
     /**
