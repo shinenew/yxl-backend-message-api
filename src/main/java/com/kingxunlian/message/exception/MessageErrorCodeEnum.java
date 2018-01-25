@@ -11,6 +11,7 @@ import com.kingxunlian.exception.XLServiceCodeEnum;
 public enum MessageErrorCodeEnum implements XLError{
     SERVER_INNER_ERROR("11001", "Message server inner error", "消息系统服务器内部错误", XLServiceCodeEnum.MESSAGE_SERVICE),
     TEMPLATE_NOT_FOUND("11002", "Message template not found", "消息模版不存在", XLServiceCodeEnum.MESSAGE_SERVICE),
+    MESSAGE_NOT_FOUND("11005", "Message  not found", "消息不存在", XLServiceCodeEnum.MESSAGE_SERVICE),
     TEMPLATE_RENDER_FAILED("11004", "Message template render failed", "消息模版渲染失败", XLServiceCodeEnum.MESSAGE_SERVICE),
     TEMPLATE_IS_DISABLED("11003", "Message template is disabled", "消息模版已禁用", XLServiceCodeEnum.MESSAGE_SERVICE);
 
